@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\css\styles.css" />
+    <None Include="wwwroot\Content\img\duena.png" />
+    <None Include="wwwroot\Content\img\lib.png" />
+    <None Include="wwwroot\Content\img\transporte.png" />
+    <None Include="wwwroot\Content\img\x.png" />
+    <None Include="wwwroot\Content\js\datatables-simple-demo.js" />
+    <None Include="wwwroot\Content\js\scripts.js" />
+  </ItemGroup>
+
+</Project>

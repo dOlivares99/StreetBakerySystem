@@ -1,0 +1,170 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+
+    .ui-dialog-titlebar-close {
+        background: url("http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-icons_888888_256x240.png") repeat scroll -93px -128px rgba(0, 0, 0, 0);
+        border: medium none;
+    }
+
+        .ui-dialog-titlebar-close:hover {
+            background: url("http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-icons_222222_256x240.png") repeat scroll -93px -128px rgba(0, 0, 0, 0);
+        }
+</style>
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<ol class="breadcrumb mb-4 mt-4">
+    <li class="breadcrumb-item"><a href="index.html">Administración</a></li>
+    <li class="breadcrumb-item active">Pedidos</li>
+</ol>
+
+
+<div class="row">
+ 
+
+    <div class="col-xl-3 col-md-6">
+    <div class="card bg-primary text-white mb-4">
+        <div class="card-body" <h3 style="text-align:center">Total pedidos:</h3> <h2 id="total vendido">34</h2></div>
+
+        <div class="card-footer d-flex align-items-center justify-content-between">
+            <a class="small text-white stretched-link">Pedidos</a>
+            <div class="small text-white"><i class="fas fa-shopping-bag fa-2x"></i> </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+<div class="card">
+    <div class="card-header">
+        Lista de pedidos
+        <i class="fas fa-boxes"></i>
+    </div>
+
+    @*boton que permite registrar un producto de extras*@
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+
+
+                <div class="input-group mb-4">
+                    <input type="text" class="form-control" id="advanced-search-input" placeholder="Search" />
+                    <button class="btn btn-primary" id="advanced-search-button" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div id="datatable"></div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <hr />
+
+        @*listado de elementos de la tabla*@
+
+        <table id="tabla" class="table table-striped" style="width: 100%">
+            <thead class="table-heading">
+                <tr>
+
+                    <th> Nombre</th>
+                    <th> Telefono</th>
+                    <th> Estado de pedido</th>
+                    <th> Precio</th>
+                    <th> Direccion</th>
+                    <th> Numero deposito</th>
+                    <th>
+                        Orden
+                    
+                    </th>
+                    <th> Acciones</th>
+                </tr>
+
+                <tr>
+
+                    <td> Maria A</td>
+                    <td> 85456567</td>
+                    <td>
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Finalizado</option>
+                            <option value="1">Entregado</option>
+                            <option value="2">No pagado</option>
+                            <option value="3">Pagado</option>
+                        </select>
+                    </td>
+                    <td> 34.000</td>
+                    <td> San jose, guadalupe calle 54</td>
+                    <td>
+                        00012
+                       
+                    </td>
+                    <td>
+                        0089
+                    </td>
+                    <td>
+                        <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
+                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
+                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
+                    </td>
+                </tr>
+          
+
+            </thead>
+
+
+            @*contenido de la tabla que viene de la base de datos*@
+
+
+
+
+
+
+            <tbody>
+            </tbody>
+
+        </table>
+
+
+        <div class="row">
+
+            <div class="col-sm-3 mx-auto">
+
+                <div class="input-group" style="text-align:center;">
+                    <p>Records  &emsp; &emsp; </p>
+                    <span class="input-group-prepend">
+
+                        <button type="button" class="btn btn-outline-secondary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                            <span class="fa fa-minus"></span>
+                        </button>
+                    </span>
+
+                    <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10" style="text-align:center;">
+                    <span class="input-group-append">
+                        <button type="button" class="btn btn-outline-secondary btn-number" data-type="plus" data-field="quant[1]" style="text-align:center;">
+                            <span class="fa fa-plus"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

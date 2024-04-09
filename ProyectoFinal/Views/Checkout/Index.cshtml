@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+
+
+<!-- Page Header Start -->
+<!-- Product Start -->
+<div class="container-xxl bg-light my-6 py-6 pt-0">
+    <div class="container">
+        <div class="bg-primary text-light rounded-bottom p-5 my-6 mt-0 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-light mb-0">Checkout</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <div class="d-inline-flex align-items-center text-start">
+                        <i class="fa fa-phone-alt fa-4x flex-shrink-0"></i>
+                        <div class="ms-4">
+                            <p class="fs-5 fw-bold mb-0">Tienes algun problema? Llamanos</p>
+                            <p class="fs-1 fw-bold mb-0">7295 3833</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<!-- Product End -->
+<!-- Page Header End -->
+<!-- Cart Start -->
+
+
+
+
+
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8 table-responsive mb-5">
+            <table class="table table-bordered text-center mb-0">
+                <thead class=" bg-light text-dark">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Total</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="align-middle">
+                    <tr>
+                        <td class="align-middle"><img src="~/Template/img/imag1.jpg" alt="" style="width: 50px;">  Macarons</td>
+                        <td class="align-middle">38.000 ₡</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm  bg-light text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">38.000 ₡</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-primary"><i class="fa fa-times"></i></button></td>
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <form class="mb-5" action="">
+                <div class="input-group">
+                    <input type="text" class="form-control p-4" placeholder="Cupón">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary">Aplicar Cupón</button>
+                    </div>
+                </div>
+            </form>
+            <div class="card border-secondary mb-5">
+                <div class="card-header bg-light border-0">
+                    <h4 class="font-weight-semi-bold m-0">Total</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between mb-3 pt-1">
+                        <h6 class="font-weight-medium">Subtotal</h6>
+                        <h6 class="font-weight-medium">34.000 ₡</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-medium">Envio</h6>
+                        <h6 class="font-weight-medium">2.000 ₡</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-medium">IVA</h6>
+                        <h6 class="font-weight-medium">3.600 ₡</h6>
+                    </div>
+                </div>
+                <div class="card-footer border-secondary bg-transparent">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5 class="font-weight-bold">Total</h5>
+                        <h5 class="font-weight-bold">38.000 ₡</h5>
+                    </div>
+                    <button class="btn btn-block btn-primary my-3 py-3" onclick="location.href='@Url.Action("ResumeIndex", "Checkout")'"  >Aplicar la compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cart End -->

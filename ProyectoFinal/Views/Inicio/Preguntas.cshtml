@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewData["Title"] = "Preguntas";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+<style>
+
+
+</style>
+
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+
+                        <li class="breadcrumb-item active" aria-current="page">Preguntas Frecuentes</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4">
+
+                <div class="card mb-4 mb-lg-0">
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush rounded-3">
+
+                            <br />
+                            <h6 style="text-align:center" class="mb-0">¿Problema con el pedido?</h6>
+
+
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("ContactoIndex", "Contacto")'" style="margin:1px auto; text-align:center; display:block; width:150px;">Contáctenos</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <br />
+
+                <div class="card mb-4 mb-lg-0">
+                    <div class="card-body p-0">
+                        <ul class="list-group list-group-flush rounded-3">
+
+                            <br />
+                            <h6 style="text-align:center" class="mb-0">En caso de no responder su consulta, puede dejar su Sugerencia.</h6>
+
+
+
+                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
+                                <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("CotizacionesIndex", "Cotizaciones")'" style="margin:1px auto; text-align:center; display:block; width:150px;">Sugerencia</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <p align="justify">
+                                <b>
+                                    1: ¿Tiene algún costo adicional los productos extras?
+                                </b>
+                                R!: Si,puedes agregar productos por un cargo extra, puedes contactarnos para pedidos personalizados.
+                            </p>
+
+                            <p align="justify">
+                                <b> 2: ¿Cuáles son los métodos de pago que aceptan? </b>
+                                R!: Aceptamos, SINPE Movil y Déposito Bancario de BAC San José,
+                                una vez confirmado su pago se empieza el proceso de realización del pedido.
+                            </p>
+                            <p align="justify">
+                                <b>
+                                    3: ¿Cómo funciona él envió?
+                                </b>
+                                R!: Debe proporcionar datos claros de donde, cuando, hora y a quien se envía el Arreglo,
+                                también puede leer nuestros Términos y Condiciones!
+                            </p>
+                            <p align="justify">
+                                <b>
+                                    4: ¿Hay reembolso si él envió no se entrega?
+                                </b>
+                                R!: Si, se devolverá el 100% del costo del pedido en caso de no ser entregado
+                                por alguna circunstancia que competa a la empresa. En caso de ser responsabilidad del comprador, no hay devolución.
+                                condiciones aplican leer nuestros Términos y Condiciones.
+                            </p>
+                            <p align="justify">
+                                <b>
+                                    5: ¿Si quiero cancelar él envió se puede hacer si aún no se ha enviado?
+                                </b>
+                                R!: Se puede cancelar Solo con 4 Horas de Anticipación (contactar por nuestro WhatsApp) se devolverá solo el 70% del mismo, el 30% será cobrado por la empresa, por cargos administrativos,
+                                revisar nuestros Términos y Condiciones.
+                            </p>
+                            <p align="justify">
+                                <b>
+                                    6: ¿El envio viene incluido en el precio final?
+                                </b>
+                                R!: Si! viene incluido en el precio final a cualquier parte del area metropolitana.
+                            </p>
+                            <p align="justify">
+                                <b>
+                                    7: ¿Puedo cambiar la fecha de la entrega del pedido?
+                                </b>
+                                R!: ¡Sí por supuesto! Siempre y cuando nos avise con 4 horas de anticipación (Via WhatsApp)
+                                y que el pedido ya no fuera enviado (Aplican Restricciones)
+                            </p>
+
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</section>
+
+

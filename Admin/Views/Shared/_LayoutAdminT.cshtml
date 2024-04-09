@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración</title>
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+<body class="sb-nav-fixed">
+
+
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <!-- Navbar  de la Marca -->
+        <br />
+        <img class="img-fluid" src="~/img/lib.png" width="60" height="60" alt="">
+        <a class="navbar-brand ps-3" href="index.html">Libélula Rosa</a>
+
+
+
+
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <!-- SubMenu de redirección-->
+
+        <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="https://localhost:44388/">Ir a Tienda</a></li>
+                    <li><a class="dropdown-item" href="@Url.Action("PorEntregarIndex", "PorEntregar")">Ir a Transporte</a></li>
+
+
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="">Cerrar Sesión</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    @*Se da acceso al menú*@
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Administración</div>
+
+                        <a class="nav-link" href="@Url.Action("UsuariosIndex", "Usuarios")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                            Usuarios
+                        </a>
+                        <a class="nav-link" href="@Url.Action("Sugerencia_Index", "Sugerencia")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
+                            Sugerencias
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Productos</div>
+
+                        <a class="nav-link" href="@Url.Action("InventarioIndex", "Inventario")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
+                            Inventario
+                        </a>
+                        <a class="nav-link" href="@Url.Action("PedidosIndex", "Pedidos")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-laptop"></i></div>
+                            Pedidos
+                        </a>
+
+                        <a class="nav-link" href="@Url.Action("VentasIndex", "Ventas")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-dollar-sign"></i></div>
+                            Ventas
+                        </a>
+
+
+
+                        <div class="sb-sidenav-menu-heading">Edición</div>
+                        <a class="nav-link" href="@Url.Action("PromocionesIndex", "Promociones")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                            Promociones
+                        </a>
+                        <a class="nav-link" href="@Url.Action("CotizacionesIndex", "Email")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-envelope-open"></i></div>
+                            Cotizaciones
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Perfil:</div>
+                    Dueña
+                    <img class="img-fluid" src="~/img/duena.png" width="80" height="80" alt="">
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+
+                    @RenderBody()
+
+                </div>
+            </main>
+
+            @*Se muestra el footer*@
+
+            <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Copyright &copy; Libélula Rosa 2022</div>
+                        <div>
+                            <a href="#">Politica de privacidad</a>
+                            &middot;
+                            <a href="#">Terms &amp; Conditions</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    @*links de los scripts a usar*@
+
+
+
+
+
+
+
+    @RenderSection("scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+    @*<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>*@
+
+
+
+    @*POPUP*@
+
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+
+
+    @*<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />*@
+    <script src="~/Scripts/notify.min.js"></script>
+
+
+
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+
+    @*ESTO ES PARA LAS VALIDACIONES*@
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>
