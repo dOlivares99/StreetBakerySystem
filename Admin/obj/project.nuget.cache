@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bin4If9Qsjnl+MYQGhac5aRoF+qZuElejIHpzsIDl71hJ5Qho3tc1dJPwcDjjis7FO/mwTTB0iheG2+5glw6uA==",
+  "dgSpecHash": "KR4TEiCfYgLNPQgAE18ndKanGdr/BtImPjuoMzo5+v7nefFTTL5TbbZOvbwp5Zj4HQ7RKT3VWH9FFK+u/DtfDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\prograweb2024\\Exa\\ProyectoFinal\\Admin\\Admin.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

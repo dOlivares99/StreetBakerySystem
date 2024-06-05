@@ -1,0 +1,12 @@
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\bin\Debug\net7.0\DataAccess.deps.json
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\bin\Debug\net7.0\DataAccess.dll
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.AssemblyInfo.cs
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.sourcelink.json
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.dll
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\refint\DataAccess.dll
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\DataAccess.pdb
+C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\DataAccess\obj\Debug\net7.0\ref\DataAccess.dll

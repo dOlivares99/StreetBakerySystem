@@ -9,91 +9,91 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Admin
 build_property.RootNamespace = Admin
-build_property.ProjectDir = C:\Users\Usuario\source\repos\prograweb2024\Exa\ProyectoFinal\Admin\
+build_property.ProjectDir = C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\Admin\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Usuario\source\repos\prograweb2024\Exa\ProyectoFinal\Admin
+build_property.MSBuildProjectDirectory = C:\Users\Usuario\Documents\ProyectoFinal\StreetBakerySystem\Admin
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Cotizaciones/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Cotizaciones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Home/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Home/Privacy.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Inventario/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Inventario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Pedidos/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Pedidos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Promociones/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Promociones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/Error.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/_LayoutAdmin.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/_LayoutAdminT.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/_LayoutAdminT.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pblQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/_LayoutTransp.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/_LayoutTransp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUcmFuc3AuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Transportista/Cancelados.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Transportista/Cancelados.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0aXN0YVxDYW5jZWxhZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Transportista/Entregados.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Transportista/Entregados.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0aXN0YVxFbnRyZWdhZG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Transportista/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Transportista/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0aXN0YVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Transportista/PorEntregar.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Transportista/PorEntregar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0aXN0YVxQb3JFbnRyZWdhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Usuario/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Ventas/Index.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Ventas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmVudGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/source/repos/prograweb2024/Exa/ProyectoFinal/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7xb81emaud

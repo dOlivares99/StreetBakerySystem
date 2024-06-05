@@ -49,6 +49,9 @@
                     <li class="breadcrumb-item"><a class="small text-light" href="#">  &emsp;&emsp; &emsp; &emsp; &emsp; &emsp; Terminos</a></li>
                     <li class="breadcrumb-item"><a class="small text-light" href="#">Admin</a></li>
                     <li class="breadcrumb-item"><a class="small text-light" href="#">Iniciar Sesion</a></li>
+                  
+                         
+                     
 
                     <div class="nav-item dropdown" style="z-index: 100;">
                     <a href="#" class=" dropdown-toggle" data-bs-toggle="dropdown"></a>
@@ -58,6 +61,8 @@
                    
                     </div>
                 </div>
+
+             
                     
                 </ol>
             </div>
@@ -110,7 +115,7 @@
                    
                     </div>
                 </div>
-              
+                <partial name="_LoginPartial" />
             </div>
             <div class=" d-none d-lg-flex">
                 <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
@@ -276,6 +281,7 @@
 
     <!-- Template Javascript -->
     <script src="~/Template/js/main.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

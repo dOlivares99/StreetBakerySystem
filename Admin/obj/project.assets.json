@@ -9664,11 +9664,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\prograweb2024\\Exa\\ProyectoFinal\\Admin\\Admin.csproj",
+      "projectUniqueName": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj",
       "projectName": "Admin",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\prograweb2024\\Exa\\ProyectoFinal\\Admin\\Admin.csproj",
+      "projectPath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\prograweb2024\\Exa\\ProyectoFinal\\Admin\\obj\\",
+      "outputPath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
