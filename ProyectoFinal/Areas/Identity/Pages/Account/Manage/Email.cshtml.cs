@@ -70,7 +70,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Required]
             [EmailAddress]
-            [Display(Name = "New email")]
+            [Display(Name = "Nueva Correo")]
             public string NewEmail { get; set; }
         }
 
@@ -126,10 +126,10 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
                     protocol: Request.Scheme);
                 await _emailSender.SendEmailAsync(
                     Input.NewEmail,
-                    "Confirm your email",
-                    $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Confirma tu correo",
+                    $"Por favor confirma tu correo <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>Click aqui.</a>.");
 
-                StatusMessage = "Confirmation link to change email sent. Please check your email.";
+                StatusMessage = "Email de confirmacion enviado, verifica tu correo.";
                 return RedirectToPage();
             }
 
@@ -162,10 +162,10 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
                 protocol: Request.Scheme);
             await _emailSender.SendEmailAsync(
                 email,
-                "Confirm your email",
-                $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                "Confirma tu correo",
+                $"Por favor confirma tu correo <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>click aqui</a>.");
 
-            StatusMessage = "Verification email sent. Please check your email.";
+            StatusMessage = "Email de verificacion enviado, revisa tu correo.";
             return RedirectToPage();
         }
     }

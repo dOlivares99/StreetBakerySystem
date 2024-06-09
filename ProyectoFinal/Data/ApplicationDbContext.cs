@@ -1,65 +1,75 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ProyectoFinal.Entities;
 using ProyectoFinal.Models;
 
 namespace ProyectoFinal.Data
 {
     public class ApplicationDbContext:IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
         }
         //protected override void OnModelCreating(ModelBuilder builder)
-       // {
+        // {
 
-            //Paa cambiar el nombre de las tablas
-          /*  base.OnModelCreating(builder);
-            builder.HasDefaultSchema("Identity");
-            builder.Entity<IdentityUser>(
-                entity => {
-                    entity.ToTable(name: "User");
-                    }
-                );
-
-            builder.Entity<IdentityRole>(
+        //Paa cambiar el nombre de las tablas
+        /*  base.OnModelCreating(builder);
+          builder.HasDefaultSchema("Identity");
+          builder.Entity<IdentityUser>(
               entity => {
-                  entity.ToTable(name: "Role");
-              }
+                  entity.ToTable(name: "User");
+                  }
               );
 
-            builder.Entity<IdentityUserRole<string>>(
-              entity => {
-                  entity.ToTable(name: "UserRoles");
-              }
-              );
-
-            builder.Entity<IdentityUserClaim<string>>(
+          builder.Entity<IdentityRole>(
             entity => {
-                entity.ToTable(name: "UserClaim");
+                entity.ToTable(name: "Role");
             }
             );
 
-            builder.Entity<IdentityUserLogin<string>>(
+          builder.Entity<IdentityUserRole<string>>(
             entity => {
-                entity.ToTable(name: "UserLogins");
+                entity.ToTable(name: "UserRoles");
             }
             );
 
-            builder.Entity<IdentityRoleClaim<string>>(
-            entity => {
-                entity.ToTable(name: "RoleClaims");
-            }
-            );
+          builder.Entity<IdentityUserClaim<string>>(
+          entity => {
+              entity.ToTable(name: "UserClaim");
+          }
+          );
 
-            builder.Entity<IdentityUserToken<string>>(
-            entity => {
-                entity.ToTable(name: "UserTokens");
-            }
-            );  */
-       // }
-        public  DbSet<MainEntity>  AdminBaker { get; set; }
+          builder.Entity<IdentityUserLogin<string>>(
+          entity => {
+              entity.ToTable(name: "UserLogins");
+          }
+          );
+
+          builder.Entity<IdentityRoleClaim<string>>(
+          entity => {
+              entity.ToTable(name: "RoleClaims");
+          }
+          );
+
+          builder.Entity<IdentityUserToken<string>>(
+          entity => {
+              entity.ToTable(name: "UserTokens");
+          }
+          );  */
+        // }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
+        public DbSet<MainEntity>  AdminBaker { get; set; }
         public DbSet<ResgistroDetalles> RegistroDetalles { get; set; }
+
+     
+
     }
 }

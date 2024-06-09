@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W4RQgnVQx6JSOH/i5HzVX0D8pC7mzi7DO4Ds08J/TYSt3D3mRlBvQ4eV+TgResZNDkaOn4dmrJhTmOj/Mk8Z/g==",
+  "dgSpecHash": "t90mKnqB9Xh/4F0LRgcCd+RjBTw+50n2Jwd4MYUga9Db3BhiiS7bYplLQogCoTneIs1JVFsuT1YZmTPqHP/drg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\ProyectoFinal\\ProyectoFinal.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\ProyectoFinal\\ProyectoFinal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

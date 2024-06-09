@@ -73,8 +73,8 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
 
                 await _emailSender.SendEmailAsync(
                     Input.Email,
-                    "Reset Password",
-                    $"Please reset your password by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    "Restablece la contraseña",
+                    $"Para restablecer la contraseña <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>click aca</a>.");
 
                 return RedirectToPage("./ForgotPasswordConfirmation");
             }

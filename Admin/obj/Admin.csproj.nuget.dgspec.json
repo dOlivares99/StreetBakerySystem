@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj": {}
+    "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\Admin\\Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj": {
+    "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\Admin\\Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\Admin\\Admin.csproj",
         "projectName": "Admin",
-        "projectPath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\Admin.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\Admin\\Admin.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\Admin\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Documents\\commitdiana\\Nueva carpeta\\Admin\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,38 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[7.0.19, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[7.0.12, )"

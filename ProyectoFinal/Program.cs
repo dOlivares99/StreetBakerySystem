@@ -6,14 +6,18 @@ using SendGrid.Extensions.DependencyInjection;
 using ProyectoFinal.Services;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using ProyectoFinal.Models;
+using ProyectoFinal.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<TheBakerStreet01Context>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+    );
+builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>();
 
 //Ajustes de verification de email 
 builder.Services.Configure<SendGridSettings>(builder.Configuration.GetSection("SendGridSettings"));

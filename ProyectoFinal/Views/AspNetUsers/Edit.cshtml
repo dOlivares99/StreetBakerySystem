@@ -1,0 +1,141 @@
+﻿@model ProyectoFinal.Entities.AspNetUser
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+
+<hr />
+<div class="row  text-center  justify-content-center align-items-center ">
+    <h1>Editar</h1>
+
+    <h4>Cambiar Datos</h4>
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+          
+                <div class="form-group">
+                 
+                <input type="Hidden" asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            <div class="form-group ">
+                 
+                <input type="Hidden" asp-for="NormalizedUserName" class="form-control" />
+                    <span asp-validation-for="NormalizedUserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                   
+                <input type="Hidden" asp-for="Email"  class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            <div class="form-group ">
+               
+                <input type="Hidden" asp-for="NormalizedEmail" class="form-control" />
+                    <span asp-validation-for="NormalizedEmail" class="text-danger"></span>
+                </div>
+        
+            <div class="form-group ">
+              
+                <input type="Hidden" asp-for="PasswordHash" class="form-control" />
+                    <span asp-validation-for="PasswordHash" class="text-danger"></span>
+                </div>
+            <div class="form-group ">
+                  
+                    <input  type="Hidden" asp-for="SecurityStamp" class="form-control" />
+                    <span asp-validation-for="SecurityStamp" class="text-danger"></span>
+                </div>
+            <div class="form-group ">
+                
+                <input type="Hidden" asp-for="ConcurrencyStamp" class="form-control" />
+                    <span asp-validation-for="ConcurrencyStamp" class="text-danger"></span>
+                </div>
+            <div class="form-group ">
+            
+                <input type="Hidden" asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+            
+         
+           
+        
+            <div class="form-group ">
+       
+                <input type="Hidden" asp-for="AccessFailedCount" class="form-control" />
+                    <span asp-validation-for="AccessFailedCount" class="text-danger"></span>
+                </div>
+            
+         
+            <div class="form-group">
+                <label asp-for="Apellidos" class="control-label"></label>
+                <input asp-for="Apellidos" class="form-control" />
+                <span asp-validation-for="Apellidos" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check invisible">
+
+                <input type="Hidden" class="form-check-input" asp-for="EmailConfirmed" /> @Html.DisplayNameFor(model => model.EmailConfirmed)
+
+            </div>
+          
+
+            <div class="form-group">
+                <label asp-for="Nombres" class="control-label"></label>
+                <input asp-for="Nombres" class="form-control" />
+                <span asp-validation-for="Nombres" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check invisible ">
+
+                <input type="Hidden" class="form-check-input" asp-for="PhoneNumberConfirmed" /> @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
+
+            </div>
+            <div class="form-group">
+                <label asp-for="Numero" class="control-label"></label>
+                <input asp-for="Numero" class="form-control" />
+                <span asp-validation-for="Numero" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check  invisible">
+
+                <input type="Hidden" class="form-check-input" asp-for="TwoFactorEnabled" /> @Html.DisplayNameFor(model => model.TwoFactorEnabled)
+
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroAdiccional" class="control-label"></label>
+                <input asp-for="NumeroAdiccional" class="form-control" />
+                <span asp-validation-for="NumeroAdiccional" class="text-danger"></span>
+            </div>
+
+            <div class="form-group form-check invisible">
+
+                <input type="Hidden" class="form-check-input" asp-for="LockoutEnabled" /> @Html.DisplayNameFor(model => model.LockoutEnabled)
+              
+            </div>
+            <div class="form-group  ">
+                <label asp-for="Direccion" class="control-label"></label>
+                <input asp-for="Direccion" class="form-control" />
+                <span asp-validation-for="Direccion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group  invisible ">
+
+                <input type="Hidden" asp-for="LockoutEnd" class="form-control" />
+                <span asp-validation-for="LockoutEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div><div>
+        <a asp-action="Index">Atras</a>
+    </div>
+</div>
+
+
+

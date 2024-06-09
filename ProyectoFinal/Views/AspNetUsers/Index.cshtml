@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ProyectoFinal.Entities.AspNetUser>
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+<h1>Informacion de Usuario</h1>
+
+<p>
+
+</p>
+<table class="table table-dark table-striped">
+
+       
+
+    <thead>
+        <tr>
+         
+         
+            
+           
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumeroAdiccional)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombres)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+            @if (@UserManager.GetUserName(User) == item.UserName)
+            {
+        <tr>
+              
+                @Html.HiddenFor(modelItem => item.UserName)
+           
+                    @Html.HiddenFor(modelItem => item.NormalizedUserName)
+
+                @Html.HiddenFor(modelItem => item.Email)
+          
+                @Html.HiddenFor(modelItem => item.NormalizedEmail)
+         
+                @Html.HiddenFor(modelItem => item.EmailConfirmed)
+            
+                    @Html.HiddenFor(modelItem => item.PasswordHash)
+          
+                    @Html.HiddenFor(modelItem => item.SecurityStamp)
+         
+                    @Html.HiddenFor(modelItem => item.ConcurrencyStamp)
+            
+                    @Html.HiddenFor(modelItem => item.PhoneNumber)
+          
+                    @Html.HiddenFor(modelItem => item.PhoneNumberConfirmed)
+         
+                    @Html.HiddenFor(modelItem => item.TwoFactorEnabled)
+           
+                    @Html.HiddenFor(modelItem => item.LockoutEnd)
+            
+                    @Html.HiddenFor(modelItem => item.LockoutEnabled)
+            
+                    @Html.HiddenFor(modelItem => item.AccessFailedCount)
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroAdiccional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar Informacion</a> 
+          
+            </td>
+        </tr>
+}
+   
+    }
+</table>
+<button><a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"> Atras </a></button>
+ </tbody>
