@@ -81,7 +81,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Recuerdame?")]
             public bool RememberMe { get; set; }
         }
 
@@ -129,7 +129,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Intento Fallido, verifica tu correo.");
+                    ModelState.AddModelError(string.Empty, "Intento Fallido, verifica tu correo o contraseña.");
                     return Page();
                 }
             }

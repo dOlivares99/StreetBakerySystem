@@ -14,7 +14,7 @@
 <div class="row  text-center  justify-content-center align-items-center ">
     <h1>Editar</h1>
 
-    <h4>Cambiar Datos</h4>
+    <br >
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -74,7 +74,7 @@
          
             <div class="form-group">
                 <label asp-for="Apellidos" class="control-label"></label>
-                <input asp-for="Apellidos" class="form-control" />
+                <input asp-for="Apellidos" class="form-control" required/>
                 <span asp-validation-for="Apellidos" class="text-danger"></span>
             </div>
             <div class="form-group form-check invisible">
@@ -86,7 +86,7 @@
 
             <div class="form-group">
                 <label asp-for="Nombres" class="control-label"></label>
-                <input asp-for="Nombres" class="form-control" />
+                <input asp-for="Nombres" class="form-control" required />
                 <span asp-validation-for="Nombres" class="text-danger"></span>
             </div>
 
@@ -97,7 +97,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Numero" class="control-label"></label>
-                <input asp-for="Numero" class="form-control" />
+                <input asp-for="Numero" class="form-control" required />
                 <span asp-validation-for="Numero" class="text-danger"></span>
             </div>
 
@@ -108,7 +108,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="NumeroAdiccional" class="control-label"></label>
-                <input asp-for="NumeroAdiccional" class="form-control" />
+                <input asp-for="NumeroAdiccional" class="form-control" required />
                 <span asp-validation-for="NumeroAdiccional" class="text-danger"></span>
             </div>
 
@@ -119,7 +119,7 @@
             </div>
             <div class="form-group  ">
                 <label asp-for="Direccion" class="control-label"></label>
-                <input asp-for="Direccion" class="form-control" />
+                <input asp-for="Direccion" class="form-control" required />
                 <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
 
@@ -128,11 +128,13 @@
                 <input type="Hidden" asp-for="LockoutEnd" class="form-control" />
                 <span asp-validation-for="LockoutEnd" class="text-danger"></span>
             </div>
+            <br>
             <div class="form-group">
                 <input type="submit" value="Guardar" class="btn btn-primary" />
             </div>
         </form>
     </div><div>
+        <br>
         <a asp-action="Index">Atras</a>
     </div>
 </div>

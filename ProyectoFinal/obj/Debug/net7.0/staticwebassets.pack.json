@@ -933,6 +933,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\ProyectoFinal\\wwwroot\\js\\Producto.js",
+      "PackagePath": "staticwebassets\\js\\Producto.js"
+    },
+    {
+      "Id": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\ProyectoFinal\\wwwroot\\js\\newFile.js",
+      "PackagePath": "staticwebassets\\js\\newFile.js"
+    },
+    {
       "Id": "C:\\Users\\Usuario\\Documents\\ProyectoFinal\\StreetBakerySystem\\ProyectoFinal\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -8,5 +8,11 @@ namespace Admin.Controllers
         {
             return View();
         }
+
+
+        public IActionResult IndexInventario()
+        {
+            return View();
+        }
     }
 }

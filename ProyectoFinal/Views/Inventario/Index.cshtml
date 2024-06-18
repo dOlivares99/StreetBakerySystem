@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<ProyectoFinal.Models.Productos>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -28,7 +29,7 @@
 
 
 <ol class="breadcrumb mb-4 mt-4">
-    <li class="breadcrumb-item"><a href="index.html">Administración</a></li>
+    <li class="breadcrumb-item"><a >Administración</a></li>
     <li class="breadcrumb-item active">Inventario de Extras</li>
 </ol>
 
@@ -57,57 +58,8 @@
     @*boton que permite registrar un producto de extras*@
 
     <div class="card-body">
-        <div class="row">
-            <div class="col-12">
 
-                <a class="btn btn-success" style="margin-bottom:10px" Onclick="PopupForm('@Url.Action("AddorEditExtras", "Inventario")')"> <i class="fa fa-plus"></i> Crear Nuevo</a>
-            </div>
-        </div>
-
-        <hr />
-
-        @*listado de elementos de la tabla*@
-
-        <table id="tabla" class="table table-striped" style="width: 100%">
-            <thead class="table-heading">
-                <tr>
-
-                    <th> Productos</th>
-                    <th> Cantidad</th>
-                    <th> Precio Venta</th>
-                    <th> Precio Compra</th>
-                    <th> Ganancia</th>
-                    <th>Acciones</th>
-                </tr>
-
-                <tr>
-
-                    <td> Maracons</td>
-                    <td> 2</td>
-                    <td> 3.000</td>
-                    <td> 1.000</td>
-                    <td> 2.000</td>
-                    <td>
-                        <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                        <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></a>
-                    </td>
-                </tr>
-
-            </thead>
-
-            @*contenido de la tabla que viene de la base de datos*@
-
-
-
-
-
-
-            <tbody>
-            </tbody>
-
-        </table>
-
+       
 
     </div>
 </div>

@@ -13,6 +13,12 @@ namespace ProyectoFinal.Controllers
         {
             return View();
         }
+
+        public IActionResult Revista()
+        {
+           
+            return View();
+        }
         public IActionResult EncuestaIndex()
         {
             return View();

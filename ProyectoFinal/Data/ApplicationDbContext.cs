@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProyectoFinal.Entities;
 using ProyectoFinal.Models;
+using System.Reflection;
 
 namespace ProyectoFinal.Data
 {
@@ -64,12 +65,14 @@ namespace ProyectoFinal.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+          
         }
 
         public DbSet<MainEntity>  AdminBaker { get; set; }
         public DbSet<ResgistroDetalles> RegistroDetalles { get; set; }
+        public DbSet<Productos> Productos { get; set; }
 
-     
+
 
     }
 }

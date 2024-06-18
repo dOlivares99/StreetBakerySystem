@@ -68,9 +68,9 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [EmailAddress]
-            [Display(Name = "Nueva Correo")]
+            [Required(ErrorMessage ="Ingresa un correo")]
+            [EmailAddress(ErrorMessage ="Correo no valido")]
+            [Display(Name = "Nuevo Correo")]
             public string NewEmail { get; set; }
         }
 
@@ -133,7 +133,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
                 return RedirectToPage();
             }
 
-            StatusMessage = "Your email is unchanged.";
+            StatusMessage = "Tu correo no se ha cambiado.";
             return RedirectToPage();
         }
 

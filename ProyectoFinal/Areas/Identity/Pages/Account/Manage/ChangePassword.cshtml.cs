@@ -53,7 +53,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
+            [Required(ErrorMessage = "Campo requerido")]
             [DataType(DataType.Password)]
             [Display(Name = "Contraseña actual")]
             public string OldPassword { get; set; }
@@ -62,10 +62,10 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = "Campo requerido")]
+            [StringLength(100, ErrorMessage = "La {0} debe ser de al menos {2} y maximo {1} caracteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Nueva Contraseña")]
+            [Display(Name = "nueva contraseña")]
             public string NewPassword { get; set; }
 
             /// <summary>
@@ -74,7 +74,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirma nueva contraseña")]
-            [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+            [Compare("NewPassword", ErrorMessage = "Las contraseñas no coinciden")]
             public string ConfirmPassword { get; set; }
         }
 

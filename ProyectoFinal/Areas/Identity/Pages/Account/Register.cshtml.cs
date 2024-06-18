@@ -75,8 +75,8 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "El email es requerido")]
+            [EmailAddress(ErrorMessage = "Formato no es valido")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
@@ -84,10 +84,10 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [Required(ErrorMessage = "La contraseña es requerida")]
+            [StringLength(100, ErrorMessage = "la {0} debe ser de al menos {2} y maximo {1} caracteres.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Contraseña")]
             public string Password { get; set; }
 
             /// <summary>
@@ -99,19 +99,19 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             [Compare("Password", ErrorMessage = "Las Contraseñas no coinciden.")]
             public string ConfirmPassword { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "El nombre es requerido")]
             [Display(Name = "Nombre")]
             public  string nombre { set; get; }
-            [Required]
+            [Required(ErrorMessage = "El Apellido es requerido")]
             [Display(Name = "Apellido")]
             public  string Apellido { set; get; }
-            [Required]
+            [Required(ErrorMessage = "La direccion es requerida")]
             [Display(Name = "Direccion")]
             public  string Direccion { set; get; }
-            [Required]
+            [Required(ErrorMessage = "El numero es requerido")]
             [Display(Name = "Numero")]
             public  string Numero { set; get; }
-            [Required]
+            [Required(ErrorMessage = "El numero adiccional es requerido")]
             [Display(Name = "Numero Adiccional")]
             public string NumeroAdicional { set; get; }
         }
