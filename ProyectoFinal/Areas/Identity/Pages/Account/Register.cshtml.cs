@@ -30,13 +30,15 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _rolManager;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> rolManager)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -44,6 +46,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _rolManager = rolManager;
         }
 
         /// <summary>
@@ -85,7 +88,7 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required(ErrorMessage = "La contraseña es requerida")]
-            [StringLength(100, ErrorMessage = "la {0} debe ser de al menos {2} y maximo {1} caracteres.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "la {0} debe ser de al menos {2} y maximo {1} caracteres.", MinimumLength = 10)]
             [DataType(DataType.Password)]
             [Display(Name = "Contraseña")]
             public string Password { get; set; }
@@ -138,6 +141,21 @@ namespace ProyectoFinal.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
+
+              if (Input.Direccion == "admin")
+                {
+                    await _userManager.AddToRoleAsync(user, "admin");
+                }
+                else if (Input.Direccion == "transport")
+                {
+                    await _userManager.AddToRoleAsync(user, "transport");
+                }
+                else
+                {
+                    await _userManager.AddToRoleAsync(user, "user");
+                }
+                  
 
                 if (result.Succeeded)
                 {

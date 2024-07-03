@@ -85,6 +85,10 @@
               "target": "Package",
               "version": "[7.0.12, )"
             },
+            "Rotativa.AspNetCore": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            },
             "SendGrid": {
               "target": "Package",
               "version": "[9.28.1, )"

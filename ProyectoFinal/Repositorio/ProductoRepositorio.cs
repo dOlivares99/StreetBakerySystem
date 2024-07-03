@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Mvc.Rendering;
 using ProyectoFinal.Data;
 using ProyectoFinal.Models;
 using ProyectoFinal.Repositorio.IRepositorio;
@@ -21,12 +22,17 @@ namespace ProyectoFinal.Repositorio
             var bodegaBD = _db.Productos.FirstOrDefault(b => b.Id == bodega.Id);
             if (bodegaBD != null)
             {
+                if(bodegaBD.imagenURL !=null)
+                {
+                    bodegaBD.imagenURL = bodega.imagenURL;
+                }
                 bodegaBD.Nombre = bodega.Nombre;
                 bodegaBD.Descripcion = bodega.Descripcion;
                 bodegaBD.categoria = bodega.categoria;
                 bodegaBD.costo = bodega.costo;
                 bodegaBD.precio = bodega.precio;
-                bodegaBD.imagenURL = bodega.imagenURL;
+               bodegaBD.estado = bodega.estado;
+                bodegaBD.Padre = bodega.Padre;
                 _db.SaveChanges();
 
 
@@ -35,5 +41,23 @@ namespace ProyectoFinal.Repositorio
      
     }
         }
+
+
+
+        public IEnumerable<SelectListItem> ObtenerTodosDropdownLista(string obj)
+        {
+     
+        
+            if (obj == "Producto")
+            {
+                return _db.Productos.Select(c => new SelectListItem
+                {
+                    Text = c.Descripcion,
+                    Value = c.Id.ToString()
+                });
+            }
+            return null;
+        }
+
     }
 }

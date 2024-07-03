@@ -1,0 +1,119 @@
+﻿@model ProyectoFinal.Models.Cotizacion
+
+@{
+    var titulo = "Crear Producto";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+
+<form method="post">
+    <div style="padding-left:15%; padding-right:15%; padding-bottom:inherit.4rem;">
+        <div class="row border-0">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+
+        @if (Model.Id != 0)
+        {
+            // Actualizar
+            titulo = "Actualizar Cotizacion";
+            <input type="hidden" asp-for="Id" id="id" />
+        }
+        <div class="col-12 border-bottom p-0">
+            <h2 class="text-primary">@titulo</h2>
+        </div>
+
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Nombre</label>
+                <input type="text" asp-for="Nombre" class="form-control" placeholder="Nombre" id="nombre"  readonly/>
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Correo</label>
+                <input type="text" asp-for="Correo" class="form-control" placeholder="Correo" readonly />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Tema</label>
+                <input type="text" asp-for="Tema" class="form-control" placeholder="Tema" readonly />
+                <span asp-validation-for="Tema" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Presupuesto</label>
+                <input type="number" asp-for="presupuesto" class="form-control" placeholder="Presupuesto" readonly />
+                <span asp-validation-for="presupuesto" class="text-danger"></span>
+            </div>
+        </div>
+             <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label>Mensaje</label>
+                <input type="text" asp-for="mensaje" class="form-control" placeholder="mensaje" readonly />
+                <span asp-validation-for="mensaje" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-2 mt-2">
+            <div class="form-group col-md-6">
+                <label for="estado">Estado</label>
+                <select type="text"  asp-for="estado" class="form-control" id="cars" name="estado">
+                    <option value="">Por Revisar</option>
+                    <option value="Revisado">Revisado</option>
+                   
+                 
+                </select>
+                <span asp-validation-for="estado" class="text-danger"></span>
+            </div>
+        </div>
+        <br />
+        <div>
+            @if (Model.Id != 0)
+            {
+                <partial name="_BotonesActualizarYRegresar" model="Model.Id" />
+            }
+            else
+            {
+                <partial name="_BotonesCrearYRegresar" />
+            }
+        </div>
+
+    </div>
+
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+
+        document.getElementById("nombre").addEventListener('change', function () {
+            validarNombre();
+        });
+
+        function validarNombre() {
+            var url = '@Url.Content("~/")' + "Cotizacions/ValidarNombre";
+            var id = '#id';
+            var nombre = '#nombre';
+
+            $.getJSON(url, { id: $(id).val(), nombre: $(nombre).val() }, function (data) {
+                $.each(data, function (key, value) {
+                    if (value) {
+                        var nombre = document.getElementById("nombre");
+                        swal("Error", "Nombre ya Existe", "error");
+                        nombre.value = "";
+                    }
+                });
+            })
+
+        }
+    </script>
+
+}

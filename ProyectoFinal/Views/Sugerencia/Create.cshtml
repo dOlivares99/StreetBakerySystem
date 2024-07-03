@@ -1,0 +1,107 @@
+﻿@model ProyectoFinal.Models.sugerencia
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+
+
+<!-- Page Header Start -->
+<div class="container-fluid  bg-warning mb-5 ">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px;background:url('/Template/img/16.jpg');background-size: cover;">
+        <h1 class="text-uppercase mb-3"> Sugerencias  </h1>
+
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Contact Start -->
+<div class="container-fluid pt-5">
+    <div class="text-center mb-4">
+        <h2 class="section-title px-5"><span class="px-2">Sugerencias</span></h2>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col-lg-7 mb-5">
+            <div class="contact-form">
+                <div id="success"></div>
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                    <div class="form-group">
+
+                        <input asp-for="Nombre" class="form-control" placeholder="nombre" required />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <br>
+
+
+                    <div class="form-group">
+                        <label for="Categoria">Tema</label>
+                        <select type="text" asp-for="Categoria" class="form-control" id="cars" name="Categoria">
+                            <option value="Pasteles">Pasteles</option>
+                            <option value="Brigadeiro">Brigadeiro</option>
+                            <option value="Macarons">Macarons</option>
+                            <option value="Otro">Otro</option>
+
+                        </select>
+                        <span asp-validation-for="Categoria" class="text-danger"></span>
+                    </div>
+                    <br>
+
+
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo</label>
+                        <select type="text" asp-for="Tipo" class="form-control" id="cars" name="Tipo">
+                            <option value="Queja">Queja</option>
+                            <option value="Comentario">Comentario</option>
+                           
+
+                        </select>
+                        <span asp-validation-for="Tipo" class="text-danger"></span>
+                    </div>
+                    <br>
+
+                
+
+
+                  
+
+                    <div class="form-group">
+                        <textarea asp-for="mensaje" class="form-control" rows="6" id="message" placeholder="Mensaje"
+                                  required="required"
+                                  data-validation-required-message="Please enter your message"></textarea>
+                        <span asp-validation-for="mensaje" class="text-danger"></span>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" value="Enviar Mensaje" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-5 mb-5" >
+            <h5 class="font-weight-semi-bold mb-3">The baker Street</h5>
+            <p>Nuestra razón de ser es suministrar el mejor servicio, si tiene alguna sugerencia haganosla saber para mejorar dia a dia nuestros productos y servicios.</p>
+            <div class="d-flex flex-column mb-3">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" >
+                    <div class="row img-twice position-relative h-100">
+                        <div class="col-6">
+                            <img class="img-fluid rounded" src="~/Template/img/team-1.jpg" alt="">
+                        </div>
+                        <div class="col-6 align-self-end">
+                            <img class="img-fluid rounded" src="~/Template/img/service-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<!-- Contact End -->

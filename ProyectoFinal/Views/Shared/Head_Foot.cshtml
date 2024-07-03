@@ -118,12 +118,12 @@
                         <a href="testimonial.html" class="dropdown-item">Promociones</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a class="nav-item nav-link" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Mas</a>
                     <div class="dropdown-menu m-0">
-                       
-                        <a class="dropdown-item" asp-area="" asp-controller="Inicio" asp-action="SugerenciaIndex">Sugerencias</a>
+                       <a class="dropdown-item" asp-area="" asp-controller="Cotizacions" asp-action="Create">Cotizaciones</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Sugerencia" asp-action="Create">Sugerencias</a>
                         <a asp-area="" asp-controller="Inicio" asp-action="EncuestaIndex" class="dropdown-item">Encuesta Producto</a>
                    
                     </div>
@@ -153,7 +153,7 @@
     </div>
     <!-- Carousel End -->
 
-
+      <partial name="_Notificaciones" />
    @RenderBody()
 
 
@@ -185,7 +185,7 @@
                     <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="Index">Inicio</a>
                     <a class="btn btn-link" asp-area="Identity" asp-page="/Account/Login">Iniciar sesion</a>
                     <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="EncuestaIndex">Calificar Producto</a>
-                    <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="SugerenciaIndex">Sugerencias</a>
+                    <a class="btn btn-link" asp-area="" asp-controller="Sugerencia" asp-action="Create">Sugerencias</a>
                   
            
                 </div>

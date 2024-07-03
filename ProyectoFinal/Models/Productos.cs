@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoFinal.Models
 {
@@ -25,9 +26,16 @@ namespace ProyectoFinal.Models
         [Required(ErrorMessage = "El precio es Requerido")]
         public int precio { get; set; }
 
-        [Required(ErrorMessage = "La imagen es requerida")]
-        public string imagenURL { get; set; }
+        public string? imagenURL { get; set; }
 
+        [Required(ErrorMessage = "El estado es Requerido")]
+        public string? estado { get; set; }
+
+        [ValidateNever]
+        public int? PadreId { get; set; }
+
+        [ValidateNever]
+        public virtual Productos Padre { get; set; }
         
     }
 }

@@ -29,18 +29,46 @@ function loadDataTable() {
             { "data": "nombre", "width": "20%" },
             { "data": "descripcion", "width": "40%" },
             { "data": "categoria", "width": "40%" },
-            { "data": "costo", "width": "40%" },
-            { "data": "precio", "width": "40%" },
-            { "data": "imagenURL", "width": "40%" },
+            {
+                "data": "costo", 
+
+                "render": function (data) {
+
+                    var ann = data.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0, minimumFractionDigits: 0, useGrouping: true });
+                    return ann;
+                },
+
+            },
+            {
+                "data": "precio", 
+                "render": function (data) {
+
+                   var an = data.toLocaleString('en-US', { style: 'decimal', maximumFractionDigits: 0, minimumFractionDigits: 0, useGrouping: true });
+                    return an;
+                },
+
+            },
+          
+            {
+                "data": "estado",
+                "render": function (data) {
+                    if (data == "" || data == "Activo") {
+                        return "Activo";
+                    }
+                    else {
+                        return "Inactivo";
+                    }
+                }, "width": "20%"
+            },
             {
                 "data": "id",
                 "render": function (data) {
                     return `
                         <div>
-                            <a href="/productos/ObtenerTodos/${data}" class="btn btn-success text-white" style="cursor:pointer">
+                            <a href="/Productos/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
                             <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a onclick=Delete("/productos/ObtenerTodos/${data}") class="btn btn-danger text-white" style="cursor:pointer">
+                            <a onclick=Delete("/Productos/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
                             <i class="bi bi-trash3-fill"></i>
                             </a>
                         </div>
@@ -54,27 +82,29 @@ function loadDataTable() {
 
 
 
+function Delete(url) {
 
-var data = [
-    [
-        "Tiger Nixon",
-        "System Architect",
-        "Edinburgh",
-        "5421",
-        "2011/04/25",
-        "$3,120"
-    ],
-    [
-        "Garrett Winters",
-        "Director",
-        "Edinburgh",
-        "8422",
-        "2011/07/25",
-        "$5,300"
-    ]
-]
-
-
-$('#example').DataTable({
-    data: data
-});
+    swal({
+        title: "Esta seguro de eliminar el Producto",
+        text: "Este registro no se podra recuperar",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true
+    }).then((borrar) => {
+        if (borrar) {
+            $.ajax({
+                type: "POST",
+                url: url,
+                success: function (data) {
+                    if (data.success) {
+                        toastr.success(data.message);
+                        datatable.ajax.reload();
+                    }
+                    else {
+                        toastr.error(data.message);
+                    }
+                }
+            });
+        }
+    });
+}

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using ProyectoFinal.Services
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -7,11 +9,14 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Static Navigation - SB Admin</title>
+    <link href="~/Admin/Content/css/styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="~/Admin/Content/css/styles.css" rel="stylesheet" />
+    
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="~/lib/select2/css/select2.min.css" rel="stylesheet" />
+    <link href="~/lib/select2-bootstrap-5-theme/select2-bootstrap-5-theme.min.css" rel="stylesheet" />
 
     <!-- Template Udemy -->
   
@@ -44,19 +49,23 @@
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Administración</div>
 
-                        <a class="nav-link" href="@Url.Action("UsuariosIndex", "Usuarios")">
+                        <a class="nav-link" href="@Url.Action("Index", "Usuario")">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                             Usuarios
                         </a>
-                        <a class="nav-link" href="@Url.Action("Sugerencia_Index", "Sugerencia")">
+                        <a class="nav-link" href="@Url.Action("IndexAdmin", "Sugerencia")">
                             <div class="sb-nav-link-icon"><i class="fas fa-comments"></i></div>
                             Sugerencias
                         </a>
-                        <div class="sb-sidenav-menu-heading">Productos</div>
+                        <div class="sb-sidenav-menu-heading">Tienda</div>
 
-                        <a class="nav-link" href="@Url.Action("InventarioIndex", "Inventario")">
+                        <a class="nav-link" href="@Url.Action("Index", "Inventario")">
                             <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
                             Inventario
+                        </a>
+                        <a class="nav-link" href="@Url.Action("IndexAdmin", "Productos")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-boxes"></i></div>
+                            Productos
                         </a>
                         <a class="nav-link" href="@Url.Action("PedidosIndex", "Pedidos")">
                             <div class="sb-nav-link-icon"><i class="fas fa-laptop"></i></div>
@@ -71,13 +80,19 @@
 
 
                         <div class="sb-sidenav-menu-heading">Edición</div>
-                        <a class="nav-link" href="@Url.Action("PromocionesIndex", "Promociones")">
+                        <a class="nav-link" href="@Url.Action("Index", "Bodega")">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Promociones
+                            Centro D
                         </a>
-                        <a class="nav-link" href="@Url.Action("CotizacionesIndex", "Email")">
-                            <div class="sb-nav-link-icon"><i class="fas fa-envelope-open"></i></div>
+                     
+                        <a class="nav-link" href="@Url.Action("IndexAdmin", "Cotizacions")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Cotizaciones
+                        </a>
+
+                        <a class="nav-link" href="@Url.Action("SendEmail", "SendEmail")">
+                            <div class="sb-nav-link-icon"><i class="fas fa-envelope-open"></i></div>
+                            Enviar Correo
                         </a>
                     </div>
                 </div>
@@ -93,14 +108,14 @@
         <div id="layoutSidenav_content">
             <main>
                 <div class="container-fluid px-4">
-                  
-                   
-                
 
 
 
 
 
+
+
+                    <partial name="_Notificaciones" />
                             @RenderBody()
 
 
@@ -142,7 +157,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="~/Admin/Content/js/scripts.js"></script>
-   
+    <script src="~/lib/select2/js/select2.min.js"></script>
 </body>
 </html>
-@RenderSection("scripts", required: true)
+@RenderSection("scripts", required: false)

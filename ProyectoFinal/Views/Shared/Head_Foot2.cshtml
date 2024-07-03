@@ -111,12 +111,12 @@
                         <a href="testimonial.html" class="dropdown-item">Promociones</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                <a asp-area="" asp-controller="Contacto" asp-action="Index" class="nav-item nav-link">Contacto</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Mas</a>
                     <div class="dropdown-menu m-0">
-                       
-                        <a class="dropdown-item" asp-area="" asp-controller="Inicio" asp-action="SugerenciaIndex">Sugerencias</a>
+                         <a class="dropdown-item" asp-area="" asp-controller="Cotizacions" asp-action="Create">Cotizaciones</a>
+                        <a class="dropdown-item" asp-area="" asp-controller="Sugerencia" asp-action="Create">Sugerencias</a>
                         <a asp-area="" asp-controller="Inicio" asp-action="EncuestaIndex" class="dropdown-item">Encuesta Producto</a>
                    
                     </div>
@@ -135,61 +135,14 @@
         </div>
     </nav>
     <!-- Navbar End -->
-
-
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="~/Template/img/Macaron.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-8">
-                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
-                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
-                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
-                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="~/Template/img/briga.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-8">
-                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
-                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
-                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
-                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="~/Template/img/pastel.jpg" alt="">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-lg-8">
-                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
-                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
-                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
-                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s" style="height: 140px; background-color: #1E1916;">
     </div>
+
+   
     <!-- Carousel End -->
 
-
+    <partial name="_Notificaciones" />
    @RenderBody()
 
 
@@ -221,7 +174,7 @@
                     <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="Index">Inicio</a>
                     <a class="btn btn-link" asp-area="Identity" asp-page="/Account/Login">Iniciar sesion</a>
                     <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="EncuestaIndex">Calificar Producto</a>
-                    <a class="btn btn-link" asp-area="" asp-controller="Inicio" asp-action="SugerenciaIndex">Sugerencias</a>
+                    <a class="btn btn-link" asp-area="" asp-controller="Sugerencia" asp-action="Create">Sugerencias</a>
                   
            
                 </div>

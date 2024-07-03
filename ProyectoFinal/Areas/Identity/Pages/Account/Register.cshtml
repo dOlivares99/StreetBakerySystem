@@ -28,23 +28,46 @@
                 <label asp-for="Input.Apellido">Apellido</label>
                 <span asp-validation-for="Input.Apellido" class="text-danger"></span>
             </div>
+         
+
+
+            @if (User.IsInRole("admin"))
+
+            {
+                <div class="form-floating mb-3">
+                    <label></label>
+                    <select asp-for="Input.Direccion" class="form-select">
+                        
+                            <option value="admin">Admin</option>
+                        <option value="transport">Transportista</option>
+                        </select>
+                    <span asp-validation-for="Input.Direccion" class="text-danger"></span>
+                    </div>
+              
+            }
+            else
+            {
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Direccion" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <label asp-for="Input.Direccion">Direccion</label>
+                    <span asp-validation-for="Input.Direccion" class="text-danger"></span>
+                </div>
+
+            }
+
             <div class="form-floating mb-3">
-                <input asp-for="Input.Direccion" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Direccion">Direccion</label>
-                <span asp-validation-for="Input.Direccion" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Numero" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <input asp-for="Input.Numero" type="number" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <label asp-for="Input.Numero">Numero</label>
                 <span asp-validation-for="Input.Numero" class="text-danger"></span>
             </div>
+      
             <div class="form-floating mb-3">
-                <input asp-for="Input.NumeroAdicional" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <input asp-for="Input.NumeroAdicional"  type="number" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
                 <label asp-for="Input.NumeroAdicional">Numero Adiccional</label>
                 <span asp-validation-for="Input.NumeroAdicional" class="text-danger"></span>
             </div>
             <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" pattern="(?=.*\d)(?=.*[\W_]).{6,}" title="Minimo 6 digitos, numero y un caracter especial es requerido." />
                 <label asp-for="Input.Password">Contraseña</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>

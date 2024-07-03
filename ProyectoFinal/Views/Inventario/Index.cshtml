@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ProyectoFinal.Models.Productos>
-
+﻿
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -7,59 +6,33 @@
 
 
 
-<style>
-
-    .ui-dialog-titlebar-close {
-        background: url("http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-icons_888888_256x240.png") repeat scroll -93px -128px rgba(0, 0, 0, 0);
-        border: medium none;
-    }
-
-        .ui-dialog-titlebar-close:hover {
-            background: url("http://code.jquery.com/ui/1.10.3/themes/smoothness/images/ui-icons_222222_256x240.png") repeat scroll -93px -128px rgba(0, 0, 0, 0);
-        }
-</style>
-
-
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-
-
-<ol class="breadcrumb mb-4 mt-4">
-    <li class="breadcrumb-item"><a >Administración</a></li>
-    <li class="breadcrumb-item active">Inventario de Extras</li>
-</ol>
-
-
+<div style="height:60px;"></div>
 <div class="row">
-    <div class="col-xl-3 col-md-6">
-        <div class="card bg-primary text-white mb-4">
-            <div class="card-body" <h3 style="text-align:center">Total de Productos:</h3><h2 style="text-align:center">0</h2></div>
-            <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="#">Inventario</a>
-                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
+    <div class="col-lg-6">
+        <h2 class="text-primary">Stock de Productos</h2>
     </div>
-
-</div>
-
-
-
-<div class="card">
-    <div class="card-header">
-        Lista de Inventario
-        <i class="fas fa-boxes"></i>
-    </div>
-
-    @*boton que permite registrar un producto de extras*@
-
-    <div class="card-body">
-
-       
-
+    <div class="col-lg-6">
+        <a class="btn btn-outline-primary" asp-action="NuevoInventario"> <i class="bi bi-plus-square-fill"></i> Crear Nuevo Inventario </a>
+        <a class="btn btn-outline-primary" asp-action="KardexProducto"> Kardex</a>
     </div>
 </div>
+
+<br />
+
+<div class="p-4 border rounded bg-light">
+    <table id="tblDatos" class="table table-responsive table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Bodega</th>
+                <th>Producto</th>
+                <th>Nombre</th>
+                <th>Costo</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="~/js/inventario.js"></script>
+}

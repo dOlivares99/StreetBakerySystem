@@ -1,8 +1,72 @@
-﻿
+﻿@using ProyectoFinal.Services
+@model ProyectoFinal.Especificaciones.PagedList<ProyectoFinal.Models.Productos>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/Head_Foot2.cshtml";
+   var page = 0;
 }
+
+
+@if ((int)ViewData["PageNumber"] == 1  )
+{
+    if((string)ViewData["BusquedaActual"] == ""){
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="~/Template/img/Macaron.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
+                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
+                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
+                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="~/Template/img/briga.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
+                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
+                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
+                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="~/Template/img/pastel.jpg" alt="">
+                <div class="owl-carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-lg-8">
+                                <p class="text-primary text-uppercase fw-bold mb-2">// The Best Bakery</p>
+                                <h1 class="display-1 text-light mb-4 animated slideInDown">Horneamos con pasion</h1>
+                                <p class="text-light fs-5 mb-4 pb-3">Nuestros productos son hechos con los mejores ingredientes y de manera artesanal.</p>
+                                <a asp-area="" asp-controller="Inicio" asp-action="AcercaIndex" class="btn btn-primary rounded-pill py-3 px-5">Leer mas</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+    }
+}
+
+
+
 
 <div class="container-xxl bg-light my-6 py-6 pt-0">
     <div class="container">
@@ -12,105 +76,96 @@
             <h1 class="display-6 mb-4">Explora nuestra categoria de productos</h1>
         </div>
         <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill px-3 mb-3">2.000 - 10.000</div>
-                        <h3 class="mb-3">Macarons</h3>
-                        <span>Contamos con gran variedad de sabores de Macarons, el precio depende de la cantidad del producto.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img//p1.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
+
+
+
+
+
+
+
+
+            <section class="mb-5">
+                <div class="container my-2">
+                    <form asp-action="Index" method="get">
+                        <div class="col-lg-6 col-md-6 col-sm-6 d-flex">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Buscar ..." aria-label="Buscar" aria-describedby="button-addon2"
+                                       name="busqueda" value="@ViewData["BusquedaActual"]" />
+                                <button type="submit" class="btn btn-outline-primary">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
                         </div>
+                    </form>
+                    <div class="row">
+                        @foreach (var producto in Model)
+                        {
+
+                            if (producto.estado == "Activo")
+                            {
+
+
+
+                                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 30px;">
+                                    <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
+                                        <div  class="text-center p-4">
+                                            <div class="d-inline-block border border-primary rounded-pill px-3 mb-3">   <p class="card-text"> ₡ @String.Format("{0:#,##0}", producto.precio) </p></div>
+                                            <h3 class="mb-3">@producto.Nombre</h3>
+                                            <span>@producto.Descripcion</span>
+                                        </div>
+                                        <div class="position-relative mt-auto">
+                                            <img class="img-fluid" src="@DS.ImagenRuta@producto.imagenURL" alt="">
+                                            <div class="product-overlay">
+                                                <a class="btn " asp-action="Detalle" asp-route-id="@producto.Id"><i class="fa fa-eye text-primary"> Comprar</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            }
+
+
+                        }
+
+
+
+
+
                     </div>
+
+
+                    <a asp-action="Index"
+                       asp-route-pageNumber="@(1)" class="btn btn-outline-primary"
+                       asp-route-busquedaActual="@ViewData["BusquedaActual"]">
+                        <i class="bi bi-skip-start-fill"></i>
+                    </a>
+
+                    <a asp-action="Index"
+                       asp-route-pageNumber="@((int)ViewData["PageNumber"]-1)" class="btn btn-outline-primary @ViewData["Previo"]"
+                       asp-route-busquedaActual="@ViewData["BusquedaActual"]">
+                        Anterior
+                    </a>
+                    <span>Pagina @ViewData["PageNumber"] de @ViewData["TotalPaginas"]</span>
+                    <a asp-action="Index"
+                       asp-route-pageNumber="@((int)ViewData["PageNumber"] +1)" class="btn btn-outline-primary @ViewData["Siguiente"]"
+                       asp-route-busquedaActual="@ViewData["BusquedaActual"]">
+                        Siguiente
+                    </a>
+                    <a asp-action="Index"
+                       asp-route-pageNumber="@ViewData["TotalPaginas"]" class="btn btn-outline-primary"
+                       asp-route-busquedaActual="@ViewData["BusquedaActual"]">
+                        <i class="bi bi-skip-end-fill"></i>
+                    </a>
+
+
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">10.000 - 20.000</div>
-                        <h3 class="mb-3">Queques</h3>
-                        <span>LLamenos y pida you queque para una ocasion especial totalmente personalizado en sabor, color y forma.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img//p2.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">2.000 - 10.000</div>
-                        <h4 class="mb-3">Brigadeiro</h4>
-                        <span>Los mejores Brigaderos de diferentes sabores, el precio varia de acuerdo a cantidad.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img/p3.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            </section>
+    
+         
         </div>
 
-        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <p class="text-primary text-uppercase mb-2">...</p>
-        
-        </div>
-
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill px-3 mb-3">2.000 - 10.000</div>
-                        <h3 class="mb-3">Macarons</h3>
-                        <span>Contamos con gran variedad de sabores de Macarons, el precio depende de la cantidad del producto.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img//p1.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3">10.000 - 20.000</div>
-                        <h3 class="mb-3">Queques</h3>
-                        <span>LLamenos y pida you queque para una ocasion especial totalmente personalizado en sabor, color y forma.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img//p2.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="product-item d-flex flex-column bg-white rounded overflow-hidden h-100">
-                    <div class="text-center p-4">
-                        <div class="d-inline-block border border-primary rounded-pill pt-1 px-3 mb-3" h>2.000 - 10.000</div>
-                        <h4 class="mb-3">Brigadeiro</h4>
-                        <span>Los mejores Brigaderos de diferentes sabores, el precio varia de acuerdo a cantidad.</span>
-                    </div>
-                    <div class="position-relative mt-auto">
-                        <img class="img-fluid" src="~/Template/img/p3.jpg" alt="">
-                        <div class="product-overlay">
-                            <a class="btn " href=""><i class="fa fa-eye text-primary"> Comprar</i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
 
         
 
@@ -118,4 +173,5 @@
     </div>
 </div>
 <!-- Product End -->
+
 

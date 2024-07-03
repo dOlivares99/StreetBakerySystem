@@ -198,6 +198,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNwTmV0VXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Bodega/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9kZWdhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Bodega/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9kZWdhXFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Checkout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -210,8 +218,32 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizaciones/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbmVzXEluZGV4LmNzaHRtbA==
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/IndexAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcSW5kZXhBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Cotizacions/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ290aXphY2lvbnNcVXBzZXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Home/Index.cshtml]
@@ -250,12 +282,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5pY2lvXFRlcm1pbm9zSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/DetalleInventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xEZXRhbGxlSW52ZW50YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/ImprimirKardex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbXByaW1pckthcmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/IndexInventario.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xJbmRleEludmVudGFyaW8uY3NodG1s
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/KardexProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xLYXJkZXhQcm9kdWN0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/KardexProductoResultado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xLYXJkZXhQcm9kdWN0b1Jlc3VsdGFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Inventario/NuevoInventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZW50YXJpb1xOdWV2b0ludmVudGFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Login/ForgotPassword.cshtml]
@@ -318,6 +366,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXEluZGV4QWRtaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Productos/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9zXFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Producto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -330,8 +382,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvbW9jaW9uZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Registro/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9cSW5kZXguY3NodG1s
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/SendEmail/SendEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZEVtYWlsXFNlbmRFbWFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/SendEmail/SentEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZEVtYWlsXFNlbnRFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/Error.cshtml]
@@ -350,6 +406,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEhlYWRfRm9vdDIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_BotonesActualizarYRegresar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQWN0dWFsaXphcllSZWdyZXNhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_BotonesActualizarYRegresar1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQWN0dWFsaXphcllSZWdyZXNhcjEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_BotonesCrearYRegresar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQ3JlYXJZUmVncmVzYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_BotonesCrearYRegresar1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb3RvbmVzQ3JlYXJZUmVncmVzYXIxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -362,8 +434,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_Notificaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYWNpb25lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Sugerencia/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VnZXJlbmNpYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Sugerencia/IndexAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VnZXJlbmNpYVxJbmRleEFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Sugerencia/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VnZXJlbmNpYVxVcHNlcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Transportista/Cancelados.cshtml]
@@ -382,8 +470,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhbnNwb3J0aXN0YVxQb3JFbnRyZWdhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/User/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
+[C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Usuario/Documents/ProyectoFinal/StreetBakerySystem/ProyectoFinal/Views/_ViewImports.cshtml]

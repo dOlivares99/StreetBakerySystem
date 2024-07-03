@@ -1,0 +1,55 @@
+﻿@model ProyectoFinal.Models.SendEmail
+
+@{
+    ViewData["Title"] = "SendEmail";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h4 class=" mt-4">Enviar correo electronico a cliente</h4>
+<hr class=" " />
+<br />
+<div class="d-flex justify-content-center bg-secondary" style="height:780px;background:url(' /Template/img/thumb.jpg');background-size: cover;">
+  
+    <div class="alert fade show indexText col-6  text-dark " role="alert">
+        <br />
+        <br />
+       
+        <br />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="SendEmail" method="post">
+            <div class="col-12 mb-3 text-dark">
+                <label asp-for="email" class="text-dark">Ingresa el correo electronico del cliente</label>
+                <input asp-for="email" type="email" id="email" size="30" required  class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3 text-dark">
+                <label asp-for="subject" class="text-dark">Asunto</label>
+                <input asp-for="subject" class="form-control" required />
+                <span asp-validation-for="subject" class="text-danger"></span>
+            </div>
+            <div class="col-12 mb-3 text-dark" >
+                <label asp-for="htmlMessage" class="text-dark">Escribe tu mensaje</label>
+                <textarea asp-for="htmlMessage" class="form-control" id="editor" rows="3"></textarea>
+                <span asp-validation-for="htmlMessage" class="text-danger"></span>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-dark text-light">Enviar Correo</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script>
+    <partial src="_ValidationScriptsPartial.cshtml"></partial>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+
+}

@@ -1,0 +1,91 @@
+﻿@model ProyectoFinal.Models.Cotizacion
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/Head_Foot.cshtml";
+}
+
+
+
+<!-- Page Header Start -->
+<div class="container-fluid  bg-warning mb-5">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+        <h1 class="text-uppercase mb-3">- - - Cotizaciones - - - </h1>
+
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Contact Start -->
+<div class="container-fluid pt-5">
+    <div class="text-center mb-4">
+        <h2 class="section-title px-5"><span class="px-2">Cotizaciones</span></h2>
+    </div>
+    <div class="row px-xl-5">
+        <div class="col-lg-7 mb-5">
+            <div class="contact-form">
+                <div id="success"></div>
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                    <div class="form-group">
+
+                        <input asp-for="Nombre" class="form-control" placeholder="nombre" required />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+
+                        <input asp-for="Correo" class="form-control" placeholder="correo" required type="email" />
+                        <span asp-validation-for="Correo" class="text-danger"></span>
+                    </div>
+                    <br>
+
+                    <div class="form-group">
+
+                        <input asp-for="Tema" class="form-control" placeholder="Tema" required />
+                        <span asp-validation-for="Tema" class="text-danger"></span>
+                    </div>
+                    <br>
+
+
+                    <div class="form-group">
+
+                        <input asp-for="presupuesto" class="form-control" placeholder="Presupuesto" type="number" required />
+                        <span asp-validation-for="presupuesto" class="text-danger"></span>
+                    </div>
+                    <br>
+
+
+                    <div class="form-group">
+                        <textarea asp-for="mensaje" class="form-control" rows="6" id="message" placeholder="Mensaje"
+                                  required="required"
+                                  data-validation-required-message="Please enter your message"></textarea>
+                        <span asp-validation-for="mensaje" class="text-danger"></span>
+                    </div>
+
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" value="Enviar Mensaje" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-5 mb-5">
+            <h5 class="font-weight-semi-bold mb-3">The baker Street</h5>
+            <p>Nuestra razón de ser es suministrar el mejor servicio, si tiene alguna duda o consulta, puede suministrarla por este medio. Te responderemos 48 horas maximo.</p>
+            <div class="d-flex flex-column mb-3">
+                <h5 class="font-weight-semi-bold mb-3">También puede contactarnos al:</h5>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>  San José, Costa Rica.</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>  info@bakerstreet.com</p>
+                <p class="mb-2"><i class="fa fa-phone-alt text-primary mr-3"></i>  8821-0583</p>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+<!-- Contact End -->

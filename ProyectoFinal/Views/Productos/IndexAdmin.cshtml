@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "IndexAdmin";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    var activo = 0;
+    var inactivo = 0;
+    var costo = 0; 
+  
 }
 
 
@@ -31,27 +35,25 @@
 
 <ol class="breadcrumb mb-4 mt-4">
     <li class="breadcrumb-item"><a>Administración</a></li>
-    <li class="breadcrumb-item active">Inventario de Extras</li>
+    <li class="breadcrumb-item active">Inventario </li>
 </ol>
 
 
-<div class="row">
-    <div class="col-xl-3 col-md-6">
-        <div class="card bg-primary text-white mb-4">
+<div >
+    <div >
+        <div class="card bg-primary text-white mb-4" style="display: inline-block;  vertical-align: middle;width:200px;">
             <div class="card-body" <h3 style="text-align:center">Total de Productos:</h3><h2 style="text-align:center">
 
                  
                 
-
                     @{
                         var total = 0;
                     }
                     @for (var i = 0; i < Model.Count(); i++)
                     {
-                         total = i + 1;
+                        total = i + 1;
                     }
-               @total
-             
+                    @total
 
 
 
@@ -61,6 +63,72 @@
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
+
+
+
+
+        <div class="card bg-primary text-white mb-4" style="display: inline-block;  vertical-align: middle;width:200px;">
+            <div class="card-body" <h3 style="text-align:center">Productos Activos:</h3><h2 style="text-align:center">
+
+
+                    @foreach (var item in Model)
+                    {
+                        if (item.estado =="Activo")
+                        {
+                            activo = activo + 1;
+                        }
+                    }
+                    @activo
+
+            </h2></div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">Producto</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+
+
+        <div class="card bg-primary text-white mb-4" style="display: inline-block;  vertical-align: middle;width:200px; ">
+            <div class="card-body" <h3 style="text-align:center">Productos Inactivos:</h3><h2 style="text-align:center">
+
+
+                    @foreach (var item in Model)
+                    {
+                        if (item.estado == "Inactivo")
+                        {
+                            inactivo = inactivo + 1;
+                        }
+                    }
+                    @inactivo
+
+            </h2></div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">Producto</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+
+
+        <div class="card bg-primary text-white mb-4" style="display: inline-block;  vertical-align: middle;width:200px; ">
+            <div class="card-body" <h3 style="text-align:center">Total promociones:</h3><h2 style="text-align:center">
+
+
+                    @foreach (var item in Model)
+                    {
+                        if (item.categoria == "Promocion")
+                        {
+                            costo = costo + 1;
+                        }
+                    }
+                    @costo
+
+            </h2></div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#">Promociones</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+
     </div>
 
 </div>
@@ -112,7 +180,7 @@
                         <th>Categoria</th>
                         <th>Costo</th>
                         <th>Precio</th>
-                        <th>ImagenURL</th>
+                        <th>Estado</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -120,69 +188,7 @@
 
         </div>
 
-        <!--
-        <p>
-        <a asp-action="Create">Create New</a>
-        </p>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Nombre)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Descripcion)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.categoria)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.costo)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.precio)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.imagenURL)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nombre)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Descripcion)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.categoria)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.costo)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.precio)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.imagenURL)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id" >Delete</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-
-
-        -->
-  
+      
 
 
     

@@ -68,11 +68,19 @@ namespace ProyectoFinal.Data
           
         }
 
+        public DbSet<Bodega> Bodegas { get; set; }
         public DbSet<MainEntity>  AdminBaker { get; set; }
         public DbSet<ResgistroDetalles> RegistroDetalles { get; set; }
         public DbSet<Productos> Productos { get; set; }
 
+        public DbSet<Cotizacion> Cotizacion { get; set; }
 
+        public DbSet<sugerencia> Sugerencia { get; set; }
+        public DbSet<BodegaProducto> BodegasProductos { get; set; }
+
+        public DbSet<Inventario> Inventarios { get; set; }
+        public DbSet<InventarioDetalle> InventarioDetalles { get; set; }
+        public DbSet<KardexInventario> KardexInventarios { get; set; }
 
     }
 }
